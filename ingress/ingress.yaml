@@ -2,13 +2,16 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: nyangmong-ingress
+  namespace: default
   annotations:
+    kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:816008167575:certificate/6d3197d0-e13f-49d4-a7e3-7cc40fd47246
-    alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS": 443}]'
+    alb.ingress.kubernetes.io/ssl-redirect: '443'
     alb.ingress.kubernetes.io/target-type: ip
+
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:816008167575:certificate/8e8fdf04-9e8a-4f81-8a88-0b454a788a8d
+
 spec:
-  ingressClassName: nginx
   rules:
     - host: api.nyangmong.com
       http:
@@ -20,3 +23,6 @@ spec:
                 name: gateway-service
                 port:
                   number: 8000
+
+
+
