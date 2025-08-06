@@ -4,5 +4,5 @@
 # 나중에 생성할 템플릿 파일에 적용할 공통 값을 세팅하는 곳
 
 replicaCount: 2
-image: 816008167575.dkr.ecr.ap-northeast-2.amazonaws.com/gateway-service:80e3d
+image: 816008167575.dkr.ecr.ap-northeast-2.amazonaws.com/nyangmong-project/gateway-service:12b00
 port: 8000
