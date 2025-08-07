@@ -5,4 +5,4 @@
 
 replicaCount: 3
 image: 816008167575.dkr.ecr.ap-northeast-2.amazonaws.com/map-service:eb63a
-port: 8000
+port: 8085

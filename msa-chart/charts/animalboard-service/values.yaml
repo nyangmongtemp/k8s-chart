@@ -5,4 +5,4 @@
 
 replicaCount: 2
 image: 816008167575.dkr.ecr.ap-northeast-2.amazonaws.com/animalboard-service:3f3e8
-port: 8000
+port: 8081
