@@ -13,6 +13,7 @@ metadata:
     alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:816008167575:certificate/8e8fdf04-9e8a-4f81-8a88-0b454a788a8d
 
 spec:
+  ingressClassName: alb
   rules:
     - host: api.nyangmong.com
       http:
